@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0f14;
+  --color-surface: #111820;
+  --color-surface-2: #17212b;
+  --color-line: #223040;
+  --color-fg: #e6edf3;
+  --color-muted: #8b9bab;
+  --color-accent: #2dd4bf;
+  --color-accent-2: #22d3ee;
+  --color-indigo: #818cf8;
+  --color-danger: #f87171;
+  --color-warn: #fbbf24;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-accent) 35%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent-2);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Reusable control styles */
+.field {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-line);
+  background: var(--color-surface);
+  padding: 0.6rem 0.8rem;
+  font-size: 0.95rem;
+  color: var(--color-fg);
+}
+.field::placeholder {
+  color: color-mix(in srgb, var(--color-muted) 70%, transparent);
+}
+.field:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 20%, transparent);
+}
+.field[aria-invalid="true"] {
+  border-color: var(--color-danger);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1.1rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: background 0.15s, border-color 0.15s, opacity 0.15s;
+  cursor: pointer;
+}
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+  color: #04201d;
+}
+.btn-primary:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+.btn-ghost {
+  border: 1px solid var(--color-line);
+  color: var(--color-fg);
+  background: transparent;
+}
+.btn-ghost:hover:not(:disabled) {
+  border-color: var(--color-accent);
+  background: var(--color-surface);
+}
+
+/* React Flow dark tweaks */
+.react-flow__attribution {
+  display: none;
+}
