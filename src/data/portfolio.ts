@@ -89,7 +89,7 @@ export const projects: Project[] = [
       "Emergency reports (fire, medical, rescue) can be slow to reach the right responders when dispatch is centralized and hotlines are congested.",
     purpose:
       "Route citizen emergency reports automatically to registered responder units within a 5–10 km radius, with guest access so people in distress are not blocked by account creation.",
-    role: "Group member, SE101 Group 5 (SBCS 3A). [EDIT] State exactly which parts you personally built or wrote.",
+    role: "Group member, SE101 Group 5 (SBCS 3A). User Interface.",
     contribution: [
       "Built working web prototypes of the citizen reporting flow and the responder dispatch dashboard.",
       "Implemented Haversine-based geofencing that filters responder units by an adjustable radius.",
@@ -106,7 +106,7 @@ export const projects: Project[] = [
       "Tracking client balances, stock and restocks on paper or in loose spreadsheets makes balances hard to verify and reports slow to produce.",
     purpose:
       "A web inventory tool for tracking client balances, cup sizes, sugar and bottles with peso-denominated pricing, plus a fuller React version covering the specified capstone modules.",
-    role: "Developer. [EDIT] Clarify whether this was solo or shared work.",
+    role: "Solo Developer.",
     contribution: [
       "Built a multi-file web app with a compact, scroll-free table layout and sticky headers.",
       "Added local auto-save, JSON export/import, a new-period workflow and print support.",
@@ -123,7 +123,7 @@ export const projects: Project[] = [
       "Scheduling algorithms are hard to compare from tables alone; students need to see how each one orders processes over time.",
     purpose:
       "Simulate six CPU scheduling algorithms and visualize the result with Gantt charts and turnaround / waiting-time computations.",
-    role: "Developer. [EDIT] Confirm your role.",
+    role: "Solo Developer.",
     contribution: [
       "Implemented FCFS, SJF, SRTF, Round Robin and both Priority (preemptive / non-preemptive) algorithms.",
       "Refactored the app into a modular object-oriented structure (config, process, scheduler, renderers).",
