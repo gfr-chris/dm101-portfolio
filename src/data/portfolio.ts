@@ -114,6 +114,8 @@ export const projects: Project[] = [
     ],
     stack: ["JavaScript", "React", "HTML/CSS", "localStorage"],
     evidence: "Working front-end application; data currently stored in the browser.",
+    repoUrl: "https://github.com/gfr-chris/soya-system",
+    demoUrl: "https://soya-system.vercel.app"
   },
   {
     slug: "cpu-scheduler",
