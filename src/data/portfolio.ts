@@ -98,26 +98,15 @@ export const projects: Project[] = [
     stack: ["React", "JavaScript", "HTML/CSS", "Haversine geofencing"],
     evidence: "Client-side web prototype; the mobile client and backend are planned for a later phase.",
   },
-  {
-    slug: "soya-ims",
-    title: "Soya Inventory Management System",
-    kind: "Web application · person-specific modules",
-    problem:
-      "Tracking client balances, stock and restocks on paper or in loose spreadsheets makes balances hard to verify and reports slow to produce.",
-    purpose:
-      "A web inventory tool for tracking client balances, cup sizes, sugar and bottles with peso-denominated pricing, plus a fuller React version covering the specified capstone modules.",
-    role: "Solo Developer.",
-    contribution: [
-      "Built a multi-file web app with a compact, scroll-free table layout and sticky headers.",
-      "Added local auto-save, JSON export/import, a new-period workflow and print support.",
-      "Built a React SPA implementing modules such as role-based authentication, dashboard, inventory CRUD, transactions, restock, audit logs, reports and user management.",
-      "Currently working, however there's no separate version for demo."
-    ],
-    stack: ["JavaScript", "React", "HTML/CSS", "localStorage"],
-    evidence: "Working front-end application; data is stored in supabase.",
-    repoUrl: "https://github.com/gfr-chris/soya-system",
-    demoUrl: "https://soya-system.vercel.app/"
-  },
+  { slug: "soya-ims", title: "Soya System Manager", 
+    kind: "Web application · customer ledger management system", 
+    problem: "Managing customer balances and periodic ledger records manually makes tracking previous balances, recording transactions, correcting historical entries, and maintaining accurate records difficult.", 
+    purpose: "A web-based customer ledger management system for managing customer balances, tracking transactions across periods, maintaining opening balances, and supporting historical corrections, backups, and data restoration.", 
+    role: "Solo Developer.", 
+    contribution: [ "Developed a Next.js application backed by Supabase PostgreSQL as the single source of truth.", "Implemented customer ledger management with Cards and Table layouts, customer filtering, alphabetical sorting, and custom drag-and-drop ordering.", "Built editable ledger drafts with explicit save operations, individual and bulk saves, and clear-row functionality.", "Implemented customer management, including bulk creation of up to 500 customers, bulk archiving, and individual customer restoration.", "Developed role-based access control for Staff, Admin, and Owner users using Supabase Auth and PostgreSQL Row-Level Security.", "Implemented atomic and batched database operations, editable opening balances, and audited historical ledger corrections with balance propagation across subsequent periods.", "Added period snapshot restoration, full backup and restoration, and automatic open-period creation.", "Implemented browser-local preferences for ledger layout and custom customer ordering." ], 
+    stack: [ "Next.js", "TypeScript", "Supabase", "PostgreSQL", "Supabase Auth", "SQL", "HTML/CSS" ], evidence: "Working web application deployed on Vercel, backed by Supabase PostgreSQL, with database migrations, role-based permissions, ledger management, and backup and restoration functionality.", 
+    repoUrl: "https://github.com/gfr-chris/soya-system", 
+    demoUrl: "https://soya-system.vercel.app/" },
   {
     slug: "cpu-scheduler",
     title: "CPU Process Scheduling Simulator",
