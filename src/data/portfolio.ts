@@ -101,7 +101,7 @@ export const projects: Project[] = [
   {
     slug: "soya-ims",
     title: "Soya Inventory Management System",
-    kind: "Web application · capstone-specified modules",
+    kind: "Web application · person-specific modules",
     problem:
       "Tracking client balances, stock and restocks on paper or in loose spreadsheets makes balances hard to verify and reports slow to produce.",
     purpose:
@@ -111,11 +111,12 @@ export const projects: Project[] = [
       "Built a multi-file web app with a compact, scroll-free table layout and sticky headers.",
       "Added local auto-save, JSON export/import, a new-period workflow and print support.",
       "Built a React SPA implementing modules such as role-based authentication, dashboard, inventory CRUD, transactions, restock, audit logs, reports and user management.",
+      "Currently working, however there's no separate version for demo."
     ],
     stack: ["JavaScript", "React", "HTML/CSS", "localStorage"],
-    evidence: "Working front-end application; data currently stored in the browser.",
+    evidence: "Working front-end application; data is stored in supabase.",
     repoUrl: "https://github.com/gfr-chris/soya-system",
-    demoUrl: "https://soya-system.vercel.app"
+    demoUrl: "https://soya-system.vercel.app/"
   },
   {
     slug: "cpu-scheduler",
