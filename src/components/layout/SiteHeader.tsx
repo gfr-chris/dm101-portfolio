@@ -21,7 +21,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-bg/85 backdrop-blur">
+    <header className="site-header sticky top-0 z-40 border-b border-line">
       <div className="mx-auto flex h-14 w-full max-w-5xl items-center justify-between px-5 sm:px-8">
         <Link href="/" className="flex items-center gap-2 font-semibold tracking-tight" onClick={() => setOpen(false)}>
           <span className="grid h-7 w-7 place-items-center rounded-md bg-linear-to-br from-accent to-accent-2 font-mono text-xs font-bold text-[#04201d]">

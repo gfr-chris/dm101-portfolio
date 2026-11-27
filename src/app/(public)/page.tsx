@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { profile, projects } from "@/data/portfolio";
@@ -6,26 +7,42 @@ import { Card, Tag } from "@/components/ui/primitives";
 export default function HomePage() {
   return (
     <div>
-      <section className="pb-16 sm:pb-20">
-        <p className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-accent">Portfolio · DM101</p>
-        <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">
-          {profile.name.split(" ").slice(0, -1).join(" ")}{" "}
-          <span className="bg-linear-to-r from-accent to-accent-2 bg-clip-text text-transparent">
-            {profile.name.split(" ").slice(-1)}
-          </span>
-        </h1>
-        <p className="mt-5 max-w-2xl text-xl leading-relaxed text-muted">{profile.tagline}</p>
-        <p className="mt-4 max-w-2xl leading-relaxed text-fg/80">{profile.intro}</p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Link href="/projects" className="btn btn-primary">
-            View projects <ArrowRight size={16} />
-          </Link>
-          <Link href="/about" className="btn btn-ghost">
-            About me
-          </Link>
-          <Link href="/contact" className="btn btn-ghost">
-            Send an inquiry
-          </Link>
+      <section className="hero-panel mb-16 sm:mb-20">
+        <div className="relative z-10 grid items-center gap-8 md:grid-cols-[minmax(0,1fr)_16rem]">
+          <div>
+            <p className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-accent">Portfolio · DM101</p>
+            <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">
+              {profile.name.split(" ").slice(0, -1).join(" ")}{" "}
+              <span className="bg-linear-to-r from-accent to-accent-2 bg-clip-text text-transparent">
+                {profile.name.split(" ").slice(-1)}
+              </span>
+            </h1>
+            <p className="mt-5 max-w-2xl text-xl leading-relaxed text-muted">{profile.tagline}</p>
+            <p className="mt-4 max-w-2xl leading-relaxed text-fg/80">{profile.intro}</p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link href="/projects" className="btn btn-primary">
+                View projects <ArrowRight size={16} />
+              </Link>
+              <Link href="/about" className="btn btn-ghost">
+                About me
+              </Link>
+              <Link href="/contact" className="btn btn-ghost">
+                Send an inquiry
+              </Link>
+            </div>
+          </div>
+          <div className="hero-portrait mx-auto w-full max-w-56 md:max-w-none">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.05rem]">
+              <Image
+                src="/profile-photo.png"
+                alt={`Professional portrait of ${profile.name}`}
+                fill
+                priority
+                sizes="(max-width: 767px) 224px, 256px"
+                className="object-cover object-center"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

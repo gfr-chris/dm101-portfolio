@@ -6,7 +6,7 @@ export function Container({ className, children }: { className?: string; childre
 
 export function PageHeader({ eyebrow, title, lead }: { eyebrow?: string; title: string; lead?: string }) {
   return (
-    <header className="mb-10 border-b border-line pb-8">
+    <header className="page-heading mb-10 border-b border-line pb-8">
       {eyebrow && (
         <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-accent">{eyebrow}</p>
       )}
@@ -17,7 +17,7 @@ export function PageHeader({ eyebrow, title, lead }: { eyebrow?: string; title: 
 }
 
 export function Card({ className, children }: { className?: string; children: React.ReactNode }) {
-  return <div className={cn("rounded-xl border border-line bg-surface p-5 sm:p-6", className)}>{children}</div>;
+  return <div className={cn("glass-card rounded-xl border border-line bg-surface p-5 sm:p-6", className)}>{children}</div>;
 }
 
 export function Tag({ children, tone = "default" }: { children: React.ReactNode; tone?: "default" | "accent" }) {
